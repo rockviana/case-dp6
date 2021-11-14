@@ -17,7 +17,7 @@ menuDownloadPDF && menuDownloadPDF.addEventListener('click', function (event) {
     ga('send', 'event', 'menu', 'download_pdf', 'download_pdf');
 });
 
-location.pathname == '/analise.html' && (function () {
+location.pathname.match(/\/analise.html/) && (function () {
     var cardsMontadoras = document.querySelectorAll('div.cards-montadoras .card-montadoras');
     Array.prototype.slice.call(cardsMontadoras || []).map(function (card) {
         card.addEventListener('click', function (event) {
@@ -26,7 +26,7 @@ location.pathname == '/analise.html' && (function () {
     });
 })();
 
-location.pathname == '/sobre.html' && (function () {
+location.pathname.match(/\/sobre.html/) && (function () {
     var inputs = document.querySelectorAll('form.contato input');
     Array.prototype.slice.call(inputs || []).map(function (input) {
         input.addEventListener('change', function (event) {
